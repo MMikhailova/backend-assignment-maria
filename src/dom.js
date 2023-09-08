@@ -1,8 +1,9 @@
 const dom = {
-    num1: document.getElementById('num-one'),
-    num2: document.getElementById('num-two'),
-    btn: document.getElementById('sum'),
-    output: document.getElementById('output'),
+    container: document.querySelector('.container'),
+    message: document.getElementById('message'),
+    restartButton: document.getElementById('restart'),
+    grid: document.getElementById('grid'),
+ cells:document.querySelectorAll('.cell')
 };
 
 export default dom;

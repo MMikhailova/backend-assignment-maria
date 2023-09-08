@@ -1,5 +1,10 @@
-// import your listeners(events)
 
-import sumListener from './events/sumListener.js';
+import cellListener from './events/cellListener.js';
 
-sumListener();
+import restartListener from './events/restartListener.js';
+
+cellListener()
+restartListener();
+
+
+
