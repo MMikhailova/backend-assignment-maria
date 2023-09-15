@@ -1,8 +1,8 @@
 /**
  * True or False
  * The code checks if the all cells of the board are full
- * @param {array} array - The array of node elements
- * @returns {Boolean} true or false - Returns true if all elements in the array have rendered text content
+ * @param {dom element} grid- A dom element 
+ * @returns {Boolean} true or false - Returns true if all children.inner  in the array have rendered text content
  *
  *
  * @example
@@ -10,9 +10,9 @@
  * return false //not all nodes render text content
  */
 
-function isBoardFull(array) {
-    for (const element of array) {
-        if (!element.innerText) {
+function isBoardFull(grid) {
+    for (const cell of grid.children) {
+        if (!cell.innerText) {
             return false;
         }
     }

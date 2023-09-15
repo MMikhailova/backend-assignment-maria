@@ -9,20 +9,21 @@
  *
  */
 
-function match(array1, array2) {
-console.log(array1,array2)
-    for (const line of array1) {
+function checkWin(grid) {
+    const lines = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+    ];
+
+    for (const line of lines) {
         const [a, b, c] = line;
-        if (
-            array2[a] &&
-            array2[a] === array2[b] &&
-            array2[a]=== array2[c]
-        ) {
+        if (grid.children[a].innerText &&
+            grid.children[a].innerText === grid.children[b].innerText &&
+            grid.children[a].innerText === grid.children[c].innerText) {
             return true;
         }
     }
-
-    return false;
 }
 
-export default match;
+    export default checkWin;

@@ -1,15 +1,17 @@
-import data from "../data.js";
+import createGrid from "../components/createGrid.js";
+import createMessage from "../components/createMessage.js";
+import updateGrid from "../components/updateGrid.js";
+// import data from "../data.js";
 import dom from "../dom.js";
 
 
-
 const restartHandler = () => {
-        for (const cell of dom.cells) {
-            cell.innerText = '';
-            cell.classList.remove('X', 'O');
-        }
-        data.currentPlayer = 'X';
-        data.gameOver = false;
-       dom.message.innerText = "Player X's turn";
+ dom.container.querySelector('#grid')? 
+    updateGrid()
+:
+       (dom.container.append(createMessage()),
+    dom.container.append(createGrid()))
+ 
+    
 }
     export default restartHandler
