@@ -1,5 +1,5 @@
 let data = {
-         currentPlayer:'X',
+    currentPlayer: 'X',
     gameOver: false,
 };
 

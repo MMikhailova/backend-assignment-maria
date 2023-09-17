@@ -2,6 +2,6 @@
 import clickHandler from '../handlers/clickHandler.js';
 
 const clickListener = (cell) => {
-   cell.addEventListener('click', () => clickHandler(cell));
+    cell.addEventListener('click', () => clickHandler(cell));
 };
 export default clickListener;

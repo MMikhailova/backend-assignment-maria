@@ -20,10 +20,9 @@ describe('createGrid function', () => {
     });
 
     test('all div with class "cell" should not have innerText', () => {
-     const grid = createGrid();
+        const grid = createGrid();
         for (const cell of grid.querySelectorAll('cell')) {
-            expect(cell.innerText.toEqual(''))
+            expect(cell.innerText.toEqual(''));
         }
     });
- 
 });

@@ -1,7 +1,7 @@
 /**
  * True or False
  * The code checks if the all cells of the board are full
- * @param {dom element} grid- A dom element 
+ * @param {dom element} grid- A dom element
  * @returns {Boolean} true or false - Returns true if all children.inner  in the array have rendered text content
  *
  *

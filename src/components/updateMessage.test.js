@@ -16,5 +16,4 @@ describe('updateMessage function', () => {
             `Player ${data.currentPlayer}'s turn`,
         );
     });
-    
 });
