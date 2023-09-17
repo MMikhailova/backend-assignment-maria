@@ -6,12 +6,14 @@ import dom from "../dom.js";
 
 
 const restartHandler = () => {
- dom.container.querySelector('#grid')? 
-    updateGrid()
-:
-       (dom.container.append(createMessage()),
-    dom.container.append(createGrid()))
- 
+    const gridExist = document.getElementById('grid')
+   const message = document.getElementById('message');
+    if (!gridExist) {
+        dom.container.append(createMessage()),
+    dom.container.append(createGrid())
+    } else {
+        updateGrid(gridExist,message);
+    }
     
 }
     export default restartHandler

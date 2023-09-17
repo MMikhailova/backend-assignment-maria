@@ -11,31 +11,19 @@ describe('createGrid function', () => {
         expect(grid.tagName).toEqual('DIV');
     });
 
-    // test('should include a paragraph with the correct sum result', () => {
-    //     const sumData = { result: 10 };
-    //     const container = createSum(sumData);
-    //     const resultParagraph = container.querySelector('p');
-    //     expect(resultParagraph.innerText).toEqual(10);
-    // });
+    test('should append 9 div with the className "cell" ', () => {
+        const grid = createGrid();
+        expect(grid.children.length).toEqual(9);
+        for (let i = 0; i < 9; i++) {
+            expect(grid.children[i].className).toEqual('cell');
+        }
+    });
 
-    // test('should append the result paragraph to the container', () => {
-    //     const sumData = { result: 7 };
-    //     const container = createSum(sumData);
-    //     expect(container.children.length).toEqual(1);
-    //     expect(container.firstChild.tagName).toEqual('P');
-    // });
-
-    // test('should handle non-numeric results', () => {
-    //     const sumData = { result: 'Test Result' };
-    //     const container = createSum(sumData);
-    //     const resultParagraph = container.querySelector('p');
-    //     expect(resultParagraph.innerText).toEqual('Test Result');
-    // });
-
-    // test('should handle missing result', () => {
-    //     const sumData = {};
-    //     const container = createSum(sumData);
-    //     const resultParagraph = container.querySelector('p');
-    //     expect(resultParagraph.innerText).toEqual(undefined);
-    // });
+    test('all div with class "cell" should not have innerText', () => {
+     const grid = createGrid();
+        for (const cell of grid.querySelectorAll('cell')) {
+            expect(cell.innerText.toEqual(''))
+        }
+    });
+ 
 });

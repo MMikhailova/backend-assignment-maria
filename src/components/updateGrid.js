@@ -1,17 +1,18 @@
 import data from "../data.js";
-import dom from "../dom.js";
+// import dom from "../dom.js";
+import updateMessage from "./updateMessage.js";
 
 
 
-const updateGrid = () => {
-    const grid=dom.container.querySelector('#grid')
+const updateGrid = (grid, message) => {
+       console.log(message)
      for (const cell of grid.children) {
             cell.innerText = "";
             cell.classList.remove("X", "O");
         }
        data.currentPlayer = "X";
         data.gameOver = false;
-        dom.container.querySelector('#message').innerText = "Player X's turn";
+       updateMessage(message)
     
   
 }

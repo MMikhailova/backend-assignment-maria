@@ -21,7 +21,7 @@ const clickHandler = (cell) => {
             data.gameOver = true;
         } else{
             data.currentPlayer = data.currentPlayer === 'X' ? 'O' : 'X';
-            updateMessage();
+            updateMessage(message);
         }
   
        
